@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>황금 파인애플 교단</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="character3.png" alt="날아다니는 피자 천사" class="flying-character">
+    <img src="character3.png" alt="날아다니는 피자 천사" class="flying-character">
+    <img src="character3.png" alt="날아다니는 피자 천사" class="flying-character">
+
+    <div id="intro" class="stage active">
+        <div class="logo-area">
+            <img src="character1.png" alt="황금 파인애플 교단 로고" class="logo" style="width: 250px;">
+        </div>
+        <h1>황금 파인애플 교단</h1>
+        <h2>단짠의 진리를 찾아서</h2>
+        <p>
+            세상은 두 가지로 나뉩니다.<br>
+            파인애플을 이해하는 자와, 그렇지 못한 자.<br><br>
+            위대한 오븐의 열기 속에서<br>
+            거짓된 편견을 태우고 진정한 구원에 이르십시오.
+        </p>
+        <button id="btn-start-ritual" class="next-btn">입단 의식 시작하기</button>
+    </div>
+
+    <div id="stage-1" class="stage">
+        <h1>참회의 방</h1>
+        <h2>너의 혀는 더럽혀졌다.</h2>
+        <p>그대를 유혹했던 '거짓된 우상'들을 클릭하여<br>'위대한 오븐'의 불길로 돌려보내라.</p>
+        
+        <div class="idol-container">
+            <button class="idol" id="idol-1">🍕 페퍼로니</button>
+            <button class="idol" id="idol-2">🍕 콤비네이션</button>
+            <button class="idol" id="idol-3">🍕 치즈</button>
+        </div>
+        
+        <p id="idol-feedback" class="feedback"></p>
+        
+        <button id="btn-to-stage-2" class="next-btn" disabled>정화를 시작한다</button>
+    </div>
+
+    <div id="stage-2" class="stage stage-conversational">
+        <div class="dialogue-area">
+            <img src="character1.png" alt="감시자" class="stage-char">
+            <div class="speech-bubble">
+                <h1>피의 서약</h1>
+                <p>의지를 증명하라. 한 글자도 틀려서는 안 된다.</p>
+            </div>
+        </div>
+        
+        <div id="oath-container">
+            <div class="oath-group" id="group-1">
+                <label for="oath-1">첫 번째 맹세:<br>"나의 혀는 오직 '황금의 즙'만을 갈망할 것을 맹세합니다."</label>
+                <input type="text" id="oath-1" class="oath-input" data-pledge="나의 혀는 오직 '황금의 즙'만을 갈망할 것을 맹세합니다.">
+            </div>
+            
+            <div class="oath-group" id="group-2" style="display:none;">
+                <label for="oath-2">두 번째 맹세:<br>"'분리의 대죄'(파인애플 골라내기)를 절대 저지르지 않을 것을 맹세합니다."</label>
+                <input type="text" id="oath-2" class="oath-input" data-pledge="'분리의 대죄'(파인애플 골라내기)를 절대 저지르지 않을 것을 맹세합니다.">
+            </div>
+            
+            <div class="oath-group" id="group-3" style="display:none;">
+                <label for="oath-3">세 번째 맹세:<br>"'무미한 자들'에게 '신성한 원반'의 진리를 전파할 것을 맹세합니다."</label>
+                <input type="text" id="oath-3" class="oath-input" data-pledge="'무미한 자들'에게 '신성한 원반'의 진리를 전파할 것을 맹세합니다.">
+            </div>
+        </div>
+
+        <button id="btn-to-stage-3" class="next-btn" disabled>서약을 봉인한다</button>
+    </div>
+
+    <div id="stage-3" class="stage">
+        <h1>재탄생</h1>
+        <p>그대의 혀는 정화되었다.<br>교단은 그대에게 새로운 이름을 하사한다.</p>
+        
+        <h2 id="new-name">...</h2>
+        
+        <button id="btn-to-sanctuary" class="next-btn">🔺 내부 성소로 입장하기</button>
+    </div>
+
+    <div id="sanctuary" class="stage">
+        <h1>내부 성소</h1>
+        <h2 id="welcome-message">...</h2>
+        <p>오직 정화된 자에게만 허락된 공간입니다.</p>
+        
+        <div class="sanctuary-content">
+            <h3>[교주의 말씀]</h3>
+            <p>"의심하는 혀는 정화의 불길을 두려워한다."</p>
+            <h3>[다음 연회]</h3>
+            <p>신성한 원반을 마주하는 다음 연회는 5일 뒤 자정입니다.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
